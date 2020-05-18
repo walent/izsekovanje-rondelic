@@ -29,7 +29,7 @@ namespace IzsekovanjeRondelicWPF
             InitializeComponent();
         }
 
-        private void calculateBtn_Click(object sender, RoutedEventArgs e)
+        private void CalculateBtn_Click(object sender, RoutedEventArgs e)
         {
 
             //double wi = double.Parse(width.Text);
@@ -42,7 +42,7 @@ namespace IzsekovanjeRondelicWPF
 
         }
 
-        private void resetBtn_Click(object sender, RoutedEventArgs e)
+        private void ResetBtn_Click(object sender, RoutedEventArgs e)
         {
             Clear();
         }
