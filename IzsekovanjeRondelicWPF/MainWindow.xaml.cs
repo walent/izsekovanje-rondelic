@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CircleInRectangleLib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,38 @@ namespace IzsekovanjeRondelicWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        CircleInRectangle circle = new CircleInRectangle();
+        double result = 0;
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void calculateBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+            //double wi = double.Parse(width.Text);
+            //double le = double.Parse(lenght.Text);
+            //double ra = double.Parse(radious.Text);
+            //double sp = double.Parse(space.Text);
+            result = circle.numberOfSlugs(257, 157, 1.7, 1);        
+            numberOfSlugs.Content = result;
+            Console.WriteLine(result);
+
+        }
+
+        private void resetBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Clear();
+        }
+        void Clear()
+        {
+            width.Text = "";
+            lenght.Text = "";
+            radious.Text = "";
+            space.Text = "";
+
         }
     }
 }

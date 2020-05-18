@@ -5,8 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IzsekovanjeRondelicWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Izsekovanje rondelic" Height="450" Width="800">
     <Grid>
+        <TextBox x:Name="lenght" HorizontalAlignment="Left" Margin="118,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" UndoLimit="99"/>
+        <Label Content="Dolžina" HorizontalAlignment="Left" Margin="33,59,0,0" VerticalAlignment="Top" Width="81"/>
+        <Label Content="Širina" HorizontalAlignment="Left" Margin="33,101,0,0" VerticalAlignment="Top" Width="53"/>
+        <TextBox x:Name="width" HorizontalAlignment="Left" Margin="118,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Polmer" HorizontalAlignment="Left" Margin="33,144,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="radious" HorizontalAlignment="Left" Margin="118,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="space" HorizontalAlignment="Left" Margin="118,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Odmink" HorizontalAlignment="Left" Margin="33,181,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="numberOfSlugs" Content="" HorizontalAlignment="Left" Margin="47,265,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="149" Width="196" FontSize="72">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.684"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="Število izsekanih rondelic" HorizontalAlignment="Left" Margin="47,250,0,0" VerticalAlignment="Top"/>
+        <ListView Margin="322,38,23,62">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="calculateBtn" Content="Izračunaj" HorizontalAlignment="Left" Margin="187,217,0,0" VerticalAlignment="Top" Click="calculateBtn_Click"/>
+        <Button x:Name="resetBtn" Content="Ponastavi" HorizontalAlignment="Left" Margin="118,217,0,0" VerticalAlignment="Top" Click="resetBtn_Click"/>
+        <Button x:Name="delateBtn" Content="Izbriši zapis" HorizontalAlignment="Left" Margin="714,385,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
